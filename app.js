@@ -8,7 +8,7 @@ app.get('/', function(req, res){
     res.render('search');
 })
 app.get('/results', function(req,res){
-    var pokemon = req.query.pokemon.toLowerCase()
+    var pokemon = req.query.pokemon
     request('https://pokeapi.co/api/v2/pokemon/' + pokemon, function(error,response, body){
         if(!error && response.statusCode === 200){
             let pokedata = JSON.parse(body)
