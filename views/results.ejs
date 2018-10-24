@@ -1,27 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title></title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    </head>
-    <body>
-    <div class='container' style='text-align:center;'>
-    <h1 style='padding-top:40px;'><%= pokedata.name.charAt(0).toUpperCase()+pokedata.name.slice(1) %></h1> 
-    <img src="<%= pokedata.sprites['front_default'] %>" style='height: 300px; width:300px;'>
-    <p>ID: <%= pokedata.id.toString() %> </p>
-    <p> Height: <%= ((pokedata.height)/2.5).toString() %>ft</p>
-    <p>Weight: <%= ((pokedata.weight)/4).toString() %>lbs</p>
-    <div><button type="" class='btn btn-outline-primary'>Upvote!</button></div>
-     
-     <a href="/">Search for another pokemon</a>
 
-     
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
 
+<body style='background: url(https://i.pinimg.com/originals/ec/bf/4d/ecbf4d300f4c1c431216466edcfed58c.jpg);'>
+    <div class='container' style='text-align:center; background: steelblue; height:auto; width:400px; margin:100px auto; padding-bottom: 100px; border-radius: 10px;'>
+        <h1 style='padding-top:40px;'>
+            <%= pokedata.name.charAt(0).toUpperCase()+pokedata.name.slice(1) %>
+        </h1>
+        <img src="<%= pokedata.sprites['front_default'] %>" style='height: 300px; width:300px;'>
+        <p>ID:
+            <%= pokedata.id.toString() %>
+        </p>
+        <p> Height:
+            <%= ((pokedata.height)/2.5).toString() %>ft</p>
+        <p>Weight:
+            <%= ((pokedata.weight)/4).toString() %>lbs</p>
+        <div><button type="" class='btn btn-outline-light'>Upvote!</button></div>
+
+        <a href="/" style='color: whitesmoke;'>Search for another pokemon</a>
     </div>
 
-  
-    </body>
+
+</body>
+
 </html>
