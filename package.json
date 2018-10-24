@@ -8,12 +8,12 @@
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "pokedex-promise-v2": "^3.1.1",
-    "request": "^2.88.0",
-    "start": "node app.js"
+    "request": "^2.88.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC"
