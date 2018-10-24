@@ -4,15 +4,14 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
    <h1><%= pokedata.name.charAt(0).toUpperCase()+pokedata.name.slice(1) %></h1> 
    <img src="<%= pokedata.sprites['front_default'] %>">
    <p>ID: <%= pokedata.id.toString() %> </p>
    <p> Height: <%= ((pokedata.height)/2.5).toString() %>ft</p>
-   <p>Weight: <%= pokedata.weight.toString() %>kg</p>
-
+   <p>Weight: <%= ((pokedata.weight)/4).toString() %>lbs</p>
+    <button type="">Upvote!</button>
     <a href="/">Search for another pokemon</a>
   
     </body>
