@@ -1,5 +1,3 @@
-var Pokedex = require('pokedex-promise-v2');
-var P = new Pokedex();
 const express = require('express');
 const app = express();
 const request = require('request');
