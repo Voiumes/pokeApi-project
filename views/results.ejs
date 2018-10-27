@@ -22,13 +22,23 @@
             <%= ((pokedata.height)/2.5).toString() %>ft</p>
         <p>Weight:
             <%= ((pokedata.weight)/4).toString() %>lbs</p>
-        <div><button type="" class='btn btn-outline-light'>Upvote!</button></div>
+            
+            <form action='/upvote' method='POST'>
+                <div><button onclick='PlusOne()' id='upvote' class='btn btn-outline-light'>Vote for <%= pokedata.name.charAt(0).toUpperCase()+pokedata.name.slice(1) %></button></div>
+            </form>
+        
+
+
 
 
         <a href="/" style='color: whitesmoke; margin-top: 40px;'>Search for another pokemon</a>
     </div>
 
-
+    <script>
+        function PlusOne(){
+            
+        }
+    </script>
 </body>
 
 </html>
