@@ -7,8 +7,19 @@
 
     </head>
     <body>
-        <h1>Hi there</h1>
-        <%= data[0].data[3].name %>
-        <%= data[0].data[3].count %>
+        <h1>LeaderBoard</h1>
+
+        <ol>
+            <% data.data.forEach(function(i){ %>
+                
+            <li> <a href="/results?pokemon=<%= i.name  %> "><%= i.name  %></a> - Score : <%= i.count %></li>  
+        <% }) %>
+            
+        </ol>   
+        <% console.log( data.data[151-1]) %>
+
+
+        
+
     </body>
 </html>

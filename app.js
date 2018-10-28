@@ -29,11 +29,11 @@ app.get('/results', function (req, res) {
         }
     })
 });
-app.get('/localdb', function (req,res){
+app.get('/myapi', function (req,res){
    request('https://api.mlab.com/api/1/databases/pokerater/collections/pokemon?apiKey=k80veGkVgUj6d5y8b5tHkc0RYqBcGWAg',function (error, response, body){
     if (!error && response.statusCode === 200) {
-        let api = JSON.parse(body)
-        res.render('myApi', { api: api });
+        let data = JSON.parse(body)[0]
+        res.render('myApi', { data: data });
     }else{
         res.render('notFound');
     }
