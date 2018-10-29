@@ -9,9 +9,10 @@
     <body>
         <h1>LeaderBoard</h1>
         <ol>
-            <% data.data.forEach(function(i){ %> 
-                <li> <a href="/results?pokemon=<%= i.name  %> "><%= i.name.charAt(0).toUpperCase()+i.name.slice(1) %></a> - Score : <%= i.count %></li>  
-            <% }) %>
+            <% for(let i = 0; i <= 9; i++){ %> 
+                <li> <a href="/results?pokemon=<%= i.name  %> "><%= data.data[i].name.charAt(0).toUpperCase()+data.data[i].name.slice(1) %></a> - Score : <%= data.data[i].count %></li>  
+            <% } %>
+            <% console.log(data.data[2].name) %>
         </ol>   
     </body>
 </html>
