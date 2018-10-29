@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>LeaderBoard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+    </head>
+    <body>
+        <h1>LeaderBoard</h1>
+        <ol>
+            <% data.data.forEach(function(i){ %> 
+                <li> <a href="/results?pokemon=<%= i.name  %> "><%= i.name.charAt(0).toUpperCase()+i.name.slice(1) %></a> - Score : <%= i.count %></li>  
+            <% }) %>
+        </ol>   
+    </body>
+</html>
